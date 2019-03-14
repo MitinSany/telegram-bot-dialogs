@@ -1,8 +1,8 @@
 {
-  "name": "MitinSany/telegram-bot-dialogs",
+  "name": "mitinsany/telegram-bot-dialogs",
   "description": "Telegram Bot API PHP SDK extension that allows to implement dialogs in bots",
   "type": "library",
-  "homepage": "https://github.com/mitinsany/telegram-bot-dialogs",
+  "homepage": "https://github.com/MitinSany/telegram-bot-dialogs",
   "license": "GPL-3",
   "version": "0.3.0",
   "authors": [
