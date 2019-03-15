@@ -24,11 +24,15 @@ class DialogsServiceProvider extends ServiceProvider
      *
      * @return void
      */
+     */
     public function register()
     {
         $this->app->singleton(Dialogs::class, function ($app) {
             /** @var Container $app */
-            return new Dialogs($app->make('telegram'), $app->make('redis'));
+            return $app->make(Dialogs::class, [
+                'telegram' => CommandBus::$instance->getTelegram(),
+                'redis' => $app->make('redis'),
+            ]);
         });
 
         $this->mergeConfigFrom(__DIR__.'/config/dialogs.php', 'dialogs');
